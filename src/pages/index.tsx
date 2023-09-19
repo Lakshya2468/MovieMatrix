@@ -1,118 +1,183 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import React from "react";
+import {Header} from "./component/header";
+import Info from "./component/footer";
+import {Movie} from "./component/movie";
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+  <main>
+     <Header/>
+   
+      <ul className="flex  mx-[15%] drop-shadow-xl justify-around flex-center py-3 font-medium text-gray-900 bg-blue-400 ">
+        <li>
+          <a href="http://localhost:3000/component/movie"  className="   text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Movie</a>
+        </li>
+        <li>
+          <a href="http://localhost:3000/component/series" className="  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Series</a>
+        </li>
+        <li>
+          <a href="#popular" className="  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Popular</a>
+        </li>
+        <li>
+          <a href="#latest" className="   text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Latest</a>
+        </li>
+        
+      </ul>
+
+
+      <div className="flex justify-center py-12"  >
+    
+      <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5407501/cover/1920x77026cbe4fc27284de3baefd4f63aca74cf.jpg" alt="" />
+
+
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      
+  <h1 className="text-2xl mt-10 text-center font-semibold" id="popular">Popular</h1>
+  <hr className="mt-5" />
+  <div className=" ml-[4%] grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        
+  
+<div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/6fNz6J2eH5tr6Xi_2vERKOId0aoQrqUD7KAErS8cSbAKI4wul3JjAh8w4Tu9Jqp_XAJCf1veMU4DH8LhpQ=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Mission: Impossible</h1>
+          <h1 className="mt-1">4.9</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/5efxbApfVAa9R1fStcVvSHqDhyXI40jLCd78b2NEuqNcC0McWceLAQGYnz0rFKZz7lywTdKNzfsXidP97A=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">John Wick 4</h1>
+          <h1 className="mt-1">4.5</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/zhK4JWCF9AYv_kzMQMQNZCLtKiQDP4HT78XrMZQI14glTZtd6pmapIRUS2aVqjR_lB0jp2y67bKOx-i-isU=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">The Flash</h1>
+          <h1 className="mt-1">4.1</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/pgIPG5puPWoGWg4O9ttT2SfYoCKItkkTVFH5eG3LFtfx_swy1GQpWB66boPUua0GMq6MrXZeNMHoTzZj2Dw=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Meg 2</h1>
+          <h1 className="mt-1">4.2</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/WfgojteTa695fCjxWdpW7_6qFWN9PgZFFlNhJAj0gU9UM8sJR_GxlBwETlc_8Ja4vKsEqgH7THwr83tHOjw=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Top Gun</h1>
+          <h1 className="mt-1">4.6</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/VgZ60UF3ZJ6D9_pOov2SILzVrBcqJmSwiswghJBKTOEKaK_iijF2NU72v74y9YxBVD4AVy7pvNYvdR7R6inG=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Spider-man</h1>
+          <h1 className="mt-1">4.8</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+
+
+
+       </div>
+
+
+
+
+           
+  <h1 className="text-2xl mt-20 text-center font-semibold"id="latest">Latest</h1>
+  <hr className="mt-5" />
+  <div className=" ml-[4%] grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        
+  
+<div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/VgZ60UF3ZJ6D9_pOov2SILzVrBcqJmSwiswghJBKTOEKaK_iijF2NU72v74y9YxBVD4AVy7pvNYvdR7R6inG=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Spider-man</h1>
+          <h1 className="mt-1">4.8</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/5efxbApfVAa9R1fStcVvSHqDhyXI40jLCd78b2NEuqNcC0McWceLAQGYnz0rFKZz7lywTdKNzfsXidP97A=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">The Last Voyage of the Demeter</h1>
+          <h1 className="mt-1">4.5</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/jK3vNyr94KEgyvdInqyHaOWym9MJCAsqqXqS_nbrwgU1bRvcx5XoSqvl-WhevEJVj4jIB374273fH6r89w=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">The Flash</h1>
+          <h1 className="mt-1">4.1</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/Apxi4rgriI7Ysn8VifmJcaO7UpIM7DODSDiJt7rwPESBVu2sXxqmHKK57Z4Rd6nNJhQ=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">Fast and Furious 6</h1>
+          <h1 className="mt-1">4.2</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/d_dMfYlbSooxcgbBKt_r23Gtf4AvCASSK1m3WqCTZoPOPenYkkrJsXSvZgWtXMN8iK626DagU3yFvfPYqVM=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold"> Gaurdians of the Galaxy</h1>
+          <h1 className="mt-1">4.6</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       <div className="mt-8">
+          <img src="https://play-lh.googleusercontent.com/5efxbApfVAa9R1fStcVvSHqDhyXI40jLCd78b2NEuqNcC0McWceLAQGYnz0rFKZz7lywTdKNzfsXidP97A=s256-rw" alt="" />
+          <h1 className="text-xl mt-2 justify-center font-semibold">John Wick 4</h1>
+          <h1 className="mt-1">4.5</h1>
+          <button className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+  Play
+</button>
+
+       </div>
+       
+
+
+
+       </div>
+
+<div className="contact">
+      <Info />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      
+  </main>
   )
 }
+
